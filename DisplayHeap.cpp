@@ -14,8 +14,7 @@ using namespace std;
 //--------------------------------------------------------------------
 
 // Outputs the priorities of the data items in a heap in both array
-// and tree form. If the heap is empty, outputs "Empty heap". This
-// operation is intended for testing/debugging purposes only.
+// and tree form.
 template < typename TypeOfData, typename TypeOfKey, typename Comparator >
 void BaseHeap<TypeOfData, TypeOfKey, Comparator>::showStructure() const
 {
@@ -45,9 +44,7 @@ void BaseHeap<TypeOfData, TypeOfKey, Comparator>::showStructure() const
 
 //--------------------------------------------------------------------
 
-// Helper function for the showStructure() function. Outputs the
-// subtree (subheap) whose root is stored in dataItems[index]. Argument
-// level is the level of this dataItems within the tree.
+// Helper function for the showStructure() function.
 template < typename TypeOfData, typename TypeOfKey, typename Comparator >
 void BaseHeap<TypeOfData, TypeOfKey, Comparator>::showSubtree(int i, int level) const
 {
