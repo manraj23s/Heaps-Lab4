@@ -47,19 +47,21 @@ BaseHeap< TypeOfData, TypeOfKey, Comparator>::BaseHeap(const BaseHeap& other)
 template <typename TypeOfData, typename TypeOfKey, typename Comparator>
 BaseHeap<TypeOfData, TypeOfKey, Comparator>& BaseHeap<TypeOfData, TypeOfKey, Comparator>::operator=(const BaseHeap& other)
 {
+	//if the values are not equal, clear the heap
 	if (this != &other)
 	{
 		clearHeap();
 
+		//equal values to this
 		sizeOfElements = other.sizeOfElements;
 		maxElements = other.maxElements;
 
+		//add new data item
 		itemData = new TypeOfData[maxElements];
 
+		//for i to size of elements, add the data item to other
 		for (int i = 0; i < sizeOfElements; i++)
-		{
 			itemData[i] = other.itemData[i];
-		}
 	}
 	return *this;
 }
