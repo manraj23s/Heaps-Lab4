@@ -78,15 +78,10 @@ BaseHeap<TypeOfData, TypeOfKey, Comparator>::~BaseHeap()
 
 //==================================================================================
 
-///Preconditions: 
-///Postconditions: 
-///Inputs: 
-///Outputs: 
-/**
-	@brief Remove, it will remove the data with the highest priority and returns it, logic error if empty
-	@param nothing
-	@return data that was deleted
-*/
+///Preconditions: Heap must be valid and instantiated.
+///Postconditions: Items are deleted from heap
+///Inputs: User input "-" and item to remove.
+///Outputs: Item removed and displayed in heap.
 template <typename TypeOfData, typename TypeOfKey, typename Comparator>
 TypeOfData BaseHeap< TypeOfData, TypeOfKey, Comparator>::deleteItem() throw (logic_error)
 {
@@ -191,11 +186,6 @@ void BaseHeap < TypeOfData, TypeOfKey, Comparator> ::clearHeap()
 ///Postconditions: Heap returns whether empty or not.
 ///Inputs: User input to check if empty.
 ///Outputs: Either empty or not empty returned.
-/**
-	@brief isEmpty, just return the size if not 0 then it is not empty
-	@param nothing
-	@return true/ false if empty then true
-*/
 template <typename TypeOfData, typename TypeOfKey, typename Comparator>
 bool BaseHeap<TypeOfData, TypeOfKey, Comparator>::isHeapEmpty() const
 {
